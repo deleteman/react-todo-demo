@@ -26,3 +26,13 @@ code {
 .theList li:hover {
 	background: #ddd;
 }
+
+.theList .black {
+	background: black;
+	color: white;
+}
+
+.theList .white {
+	background: white;
+	color: black;
+}

@@ -45,8 +45,13 @@ class App extends Component {
       items: filteredItems,
     })
   }
+  
 
   render() {
+    const itemsProps = {
+      entries:this.state.items,
+      deleteItem:this.deleteItem
+    }
     return (
       <div className="App">      
         <TodoList addItem={this.addItem}
@@ -54,7 +59,7 @@ class App extends Component {
         handleInput={this.handleInput}
         currentItem={this.state.currentItem}
         />
-        <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
+        <TodoItems {...itemsProps}/>
       </div>
     )
   }
