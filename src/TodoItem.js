@@ -6,10 +6,8 @@ const TodoItem = ({text, itemKey}) => {
 
  	const [iClass, setIClass] = useState("white")
 
-	let _on = false
-  	const toggleBackground = () => {
-  		_on = !_on
-  		setIClass(_on ? "white" : "black")
+  	const toggleBackground = status => {
+  		setIClass(status ? "white" : "black")
   	}
 
   	const toggleProps = {
