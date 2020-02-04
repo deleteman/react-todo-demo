@@ -1,11 +1,9 @@
-import React, { Component, useState } from 'react'
-import TodoItem from './TodoItem'
+import React from 'react'
 
 
 const TodoItems = ({entries, deleteItem}) => {
 	const createTasks = (item) => {
-	  	
-	    return <TodoItem key={item.key} text={item.text}/>
+     	return <li key={item.key} onClick={() => deleteItem(item.key)}>{item.text}</li>
 	}
   
 	const todoentries = entries || []  
